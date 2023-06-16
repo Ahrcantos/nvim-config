@@ -14,4 +14,5 @@ with pkgs.vimPlugins; [
   rust-tools-nvim
   git-blame-nvim
   trouble-nvim
+  vimwiki
 ]

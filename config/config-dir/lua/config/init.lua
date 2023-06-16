@@ -1,5 +1,6 @@
 require('config/remap')
 require('config/set')
+require('config/vimwiki')
 
 local onedark = require('onedark');
 
