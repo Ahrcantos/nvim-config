@@ -87,6 +87,12 @@ vim.g.cobol_colorcolumns = 1
 -- Nix
 lspconfig.rnix.setup{}
 
+-- Dhall
+lspconfig.dhall_lsp_server.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 
 vim.diagnostic.config({
   virtual_text = false,

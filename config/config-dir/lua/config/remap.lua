@@ -1,3 +1,5 @@
+local lint = require('config/linting')
+
 vim.g.mapleader = ","
 
 
@@ -10,4 +12,4 @@ vim.keymap.set('n', '<leader>tk', vim.cmd.tabnext)
 
 
 -- Linting
-vim.keymap.set('n', '<leader>e', vim.cmd.EslintFixAll)
+vim.keymap.set('n', '<leader>e', lint)
