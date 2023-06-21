@@ -19,6 +19,7 @@ let
     pkgs.nixpkgs-fmt
     pkgs.rnix-lsp
     pkgs.rust-analyzer
+    pkgs.dhall-language-server
   ];
 
   bash = pkgs.bash;

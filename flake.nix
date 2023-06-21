@@ -20,9 +20,15 @@
       };
     };
 
+    overlayDhallLanguageServer = prev: final: {
+      dhall-language-server = import ./packages/dhallLanguageServer.nix {
+        pkgs = final;
+      };
+    };
+
     pkgs = import nixpkgs {
       system = "x86_64-linux";
-      overlays = [ overlayFlakeInputs overlayCustomNeovim];
+      overlays = [ overlayFlakeInputs overlayDhallLanguageServer overlayCustomNeovim];
     };
   in {
     packages.x86_64-linux.default = pkgs.customNeovim;
