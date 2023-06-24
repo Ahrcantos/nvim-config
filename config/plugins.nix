@@ -11,7 +11,6 @@ with pkgs.vimPlugins; [
   cmp_luasnip
   luasnip
   vim-commentary
-  rust-tools-nvim
   git-blame-nvim
   trouble-nvim
   vimwiki
