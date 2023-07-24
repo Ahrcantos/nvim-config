@@ -20,17 +20,19 @@ let
     pkgs.rnix-lsp
     pkgs.rust-analyzer
     pkgs.dhall-language-server
+    pkgs.python310Packages.jedi-language-server
   ];
 
   bash = pkgs.bash;
   configDir = import ../config { inherit pkgs; };
   invokeNeovimScript = ''
-  XDG_CONFIG_HOME="${configDir}" exec -a "$0" ${wrappedNeovim}/bin/nvim -u "${configDir}/nvim/init.lua" "$@"
+    XDG_CONFIG_HOME="${configDir}" exec -a "$0" ${wrappedNeovim}/bin/nvim -u "${configDir}/nvim/init.lua" "$@"
   '';
 
 
-in pkgs.writeShellApplication {
- name = "nvim";
- runtimeInputs = runtimeDependencies;
- text = invokeNeovimScript;
+in
+pkgs.writeShellApplication {
+  name = "nvim";
+  runtimeInputs = runtimeDependencies;
+  text = invokeNeovimScript;
 }

@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local null_ls = require("null-ls")
 
 local on_attach = function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
@@ -78,6 +79,22 @@ lspconfig.dhall_lsp_server.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
+
+-- Python
+lspconfig.jedi_language_server.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.diagnostics.pylint,
+        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.mypy,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort
+    },
+})
 
 
 vim.diagnostic.config({

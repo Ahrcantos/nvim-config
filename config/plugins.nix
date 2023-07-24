@@ -14,4 +14,5 @@ with pkgs.vimPlugins; [
   git-blame-nvim
   trouble-nvim
   vimwiki
+  null-ls-nvim
 ]
