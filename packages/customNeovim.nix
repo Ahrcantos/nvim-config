@@ -17,7 +17,6 @@ let
     pkgs.nodePackages."@volar/vue-language-server"
     pkgs.ripgrep
     pkgs.nixpkgs-fmt
-    pkgs.rnix-lsp
     pkgs.rust-analyzer
     pkgs.dhall-language-server
     pkgs.python310Packages.jedi-language-server
