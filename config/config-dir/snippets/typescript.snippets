@@ -1,2 +1,20 @@
 snippet todo "Adds a todo"
         throw new Error('TODO');
+
+
+snippet route "Add a new express route"
+	import { Response, NextFunction } from 'express';
+
+	import { Request } from '@foxbase/service';
+
+	export default async function (
+		req: Request,
+		res: Response,
+		next: NextFunction,
+	) {
+		try {
+			${0}
+		} catch (err) {
+			next(err);
+		}
+	}
