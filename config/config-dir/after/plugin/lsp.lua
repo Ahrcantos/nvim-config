@@ -80,6 +80,24 @@ lspconfig.dhall_lsp_server.setup {
   capabilities = capabilities
 }
 
+-- Golang
+
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      experimentalPostfixCompletions = true,
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+      },
+      staticcheck = true,
+    }
+  },
+}
+
 -- Python
 lspconfig.jedi_language_server.setup {
   on_attach = on_attach,

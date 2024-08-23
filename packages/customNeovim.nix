@@ -20,6 +20,7 @@ let
     pkgs.rust-analyzer
     pkgs.dhall-language-server
     pkgs.python310Packages.jedi-language-server
+    pkgs.gopls
   ];
 
   bash = pkgs.bash;
