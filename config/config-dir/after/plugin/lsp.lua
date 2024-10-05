@@ -114,6 +114,12 @@ null_ls.setup({
     },
 })
 
+-- C#
+lspconfig.csharp_ls.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities
+}
 
 vim.diagnostic.config({
   virtual_text = false,
