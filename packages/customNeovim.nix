@@ -21,7 +21,6 @@ let
     pkgs.dhall-language-server
     pkgs.python310Packages.jedi-language-server
     pkgs.gopls
-    # pkgs.csharp-ls
   ];
 
   bash = pkgs.bash;
