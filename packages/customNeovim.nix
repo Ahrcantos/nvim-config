@@ -21,6 +21,7 @@ let
     pkgs.dhall-language-server
     pkgs.python310Packages.jedi-language-server
     pkgs.gopls
+    pkgs.ltex-ls
   ];
 
   bash = pkgs.bash;

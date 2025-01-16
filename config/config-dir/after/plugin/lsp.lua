@@ -114,6 +114,27 @@ null_ls.setup({
     },
 })
 
+-- Spelling / Grammar
+lspconfig.ltex.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    ltex = {
+      language = "en-US",
+      enabledRules = {
+        ["*"] = {
+          "MISSING_VERB",
+          "PASSIVE_VOICE"
+        }
+      },
+      completionEnabled = true,
+      additionalRules = {
+        enablePickyRules = true
+      }
+    }
+  }
+}
+
 
 vim.diagnostic.config({
   virtual_text = false,

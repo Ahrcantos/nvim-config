@@ -9,9 +9,9 @@ with pkgs.vimPlugins; [
   nvim-cmp
   cmp-nvim-lsp
   cmp_luasnip
-  # luasnip
+  luasnip
   vim-commentary
-  # git-blame-nvim
+  git-blame-nvim
   trouble-nvim
   vimwiki
   null-ls-nvim
